@@ -10,6 +10,7 @@ class EmailAddressParser
   end
   
   def parse
+    delimiters = [',', ' ', ", "]
     return emails.split(Regexp.union(delimiters)).uniq
   end
 end
